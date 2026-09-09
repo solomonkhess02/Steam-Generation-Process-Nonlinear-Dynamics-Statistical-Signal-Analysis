@@ -1,137 +1,59 @@
 # Steam Generation Process: Nonlinear Dynamics & Statistical Signal Analysis
 
-Research project on the analysis and prediction of steam temperature in a thermal power plant using nonlinear dynamics, statistical analysis, and machine learning.
+Research project focused on understanding the nonlinear and dynamically changing behavior of a thermal power plant steam-generation process using statistical signal analysis, nonlinear dynamics, and machine-learning-based prediction.
 
-## Overview
+## Research Overview
 
-A thermal power plant is a complex dynamical system in which multiple process parameters continuously interact and change with operating conditions.
+The study investigates the dynamic behavior of steam-generation process variables and their relationship with superheater steam temperature.
 
-This project analyzes high-frequency process data from a thermal power plant to understand the dynamic behavior of the steam-generation process and identify process variables that are relevant to superheater steam-temperature prediction.
-
-The work combines:
+The work explores:
 
 - Nonlinear dynamical-system analysis
-- Statistical signal analysis
-- Feature selection
-- Time-series analysis
-- Regression and neural-network modeling
-- Sliding-window prediction
+- Time-series and statistical signal analysis
+- Process-variable identification and feature selection
+- Regression-based prediction
+- Artificial neural network modeling
+- Sliding-window prediction under changing operating conditions
 
-The longer-term objective of this line of work is to support process understanding and future control-strategy development for flexible power generation.
+The research was carried out using industrial thermal power plant process data.
 
-## Dataset
+## Manuscript
 
-The analysis uses one month of thermal power plant process data.
+The research manuscript is available here:
 
-- **Duration:** 31 days
-- **Process parameters:** 96
-- **Sampling interval:** 30 seconds
-- **Observations per parameter:** 89,291
-- **Target variable:** Superheater Steam Temperature (Line-A)
+[**Read the Manuscript (PDF)**](./manuscript/Steam_Generation_Process_Nonlinear_Dynamics_Statistical_Signal_Analysis.pdf)
 
-The process operates under normal-load and low-load conditions, allowing the analysis to examine how system dynamics change with operating state.
+## Research Methods
 
-> **Data Availability:** The underlying industrial plant data is not included in this repository.
+The study investigates methods including:
 
-## Research Questions
-
-The project investigates several questions:
-
-1. Are the process signals stationary or dynamically changing?
-2. Do the signals exhibit persistence or nonlinear behavior?
-3. How do process dynamics change between normal-load and low-load operation?
-4. Which process variables are most relevant to superheater steam temperature?
-5. Can statistical and machine-learning models predict steam temperature under changing operating conditions?
-6. Can dynamic feature selection improve prediction for a non-stationary process?
-
-## Methodology
-
-### 1. Process and Signal Analysis
-
-The process signals are first analyzed to characterize their dynamic behavior.
-
-Methods include:
-
-- Stationarity analysis
-- Time-lag analysis
-- Hurst exponent
-- State-space analysis
-- Sliding-window analysis
-- Root Mean Square (RMS) analysis
-- Dynamics Similarity Index (DSI)
-- Chaotic Dynamics Marker (CDM)
-
-These analyses are used to understand how the process state changes with time and operating load.
-
-### 2. Statistical Analysis and Feature Selection
-
-Several statistical methods are used to identify influential process variables:
-
-- Ordinary Least Squares (OLS) regression
-- t-value based analysis
+- Hurst Exponent Analysis
+- Time-Lag Analysis
+- State-Space Analysis
+- Recurrence / Dynamical-System Analysis
+- Ordinary Least Squares (OLS) Regression
 - Minimum Redundancy Maximum Relevance (mRMR)
-- Covariance analysis
 - Akaike Information Criterion (AIC)
-
-The objective is to identify process variables that provide useful information for superheater steam-temperature prediction while reducing redundant features.
-
-### 3. Steam Temperature Prediction
-
-Prediction models explored in the study include:
-
 - Multiple Linear Regression (MLR)
-- Artificial Neural Network (ANN)
+- Artificial Neural Networks (ANN)
+- Sliding-Window Modeling
 
-Both fixed-feature and dynamically selected-feature configurations are investigated.
+## Data & Confidentiality
 
-### 4. Sliding-Window Modeling
+The underlying industrial dataset is **not publicly available** and is not included in this repository.
 
-Because the process is non-stationary, a fixed set of variables may not remain equally informative throughout the operating period.
+Plant-specific data, proprietary results, figures, and other restricted material are intentionally excluded from the public repository.
 
-A sliding-window approach is therefore used to dynamically select process variables based on statistical significance and predict future steam-temperature values.
+This repository is provided to document the research work and make the research manuscript available as a portfolio/research artifact.
 
-The analysis investigates different training-window, step-size, and prediction-window configurations under normal and low-load conditions.
+## Research Context
 
-## Key Findings
+The work focuses on process understanding and predictive modeling of steam-generation dynamics. A possible future research direction is the development of control strategies based on the identified process dynamics.
 
-The analysis indicates that:
+## Author
 
-- The process signals are generally **non-stationary**.
-- Steam-temperature dynamics vary with operating load.
-- Steam temperature shows **persistent behavior**, with stronger persistence observed during low-load operation.
-- The time lag of the steam-temperature signal changes across successive windows.
-- **Burner Tilt, Spray Flow, and Secondary Air Temperature** emerge as important variables for steam-temperature prediction.
-- Other potentially useful variables include Total Air Flow and Total Mainstream Steam Flow depending on operating condition.
-- Dynamic feature selection can improve prediction compared with using a fixed set of variables over longer prediction intervals.
-- Shorter prediction windows can be more suitable when process dynamics change rapidly.
+**Solomon Khess**  
+B.Tech–M.Tech, Metallurgical & Materials Engineering  
+Indian Institute of Technology Bhubaneswar
 
-## Results
-
-Prediction performance is evaluated using:
-
-- **R²**
-- **Mean Absolute Error (MAE)**
-
-The analysis shows substantial variation in prediction performance across operating windows, highlighting the effect of changing process dynamics.
-
-For normal-load conditions, a large majority of prediction windows show meaningful correlation between predicted and actual steam temperature, while low-load conditions exhibit greater variability.
-
-## Repository Structure
-
-```text
-Steam-Generation-Process-Nonlinear-Dynamics-Statistical-Signal-Analysis/
-│
-├── README.md
-├── notebooks/
-│   ├── signal_analysis/
-│   ├── statistical_analysis/
-│   └── prediction/
-│
-├── src/
-│   ├── signal_analysis/
-│   ├── feature_selection/
-│   └── prediction/
-│
-├── figures/
-│
-└── docs/
+[GitHub](https://github.com/solomonkhess02) · [LinkedIn](https://www.linkedin.com/)
